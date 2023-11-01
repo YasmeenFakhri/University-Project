@@ -14,6 +14,20 @@ app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/book' , bookRouter);
 app.use('/api/v1/category' , categoryRouter);
 
+//app.use(cors({
+//     origin:["https://university-project-ten.vercel.app/"],
+//     methods : ["POST" , "GET"],
+//     credentials : true
+// }))
+
+
+const cors = require('cors');
+app.use(cors());
+
+const compression = require("compression");
+app.use(compression());
+
+
 // connect to db
 mongoose.connect(process.env.MONGO_URI) 
         .then(()=> {
@@ -26,5 +40,5 @@ mongoose.connect(process.env.MONGO_URI)
         })
           
 app.get('/',(req,res)=>{
-    res.send('Gehad Shalaby')
+   res.json("Hello")
 })
