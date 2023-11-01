@@ -58,6 +58,7 @@ label {
   font-size: 24px;
   width: 100%;
   color: white;
+  text-align: center;
 }
 ::placeholder {
   color: #95abb4 !important;
@@ -147,13 +148,11 @@ label {
   filter: blur(10px);
   transition-duration: 0.5s;
 }
-
 #button:hover::after,
 #button1:hover::after {
   transform: translateX(600px);
   transition-duration: 0.5s;
 }
-
 .signupContainer {
   margin-top: 15px;
   display: flex;
@@ -191,4 +190,8 @@ a {
   @include mediapoints(mobile) {
     font-size: 12px !important;
   }
+}
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
 }

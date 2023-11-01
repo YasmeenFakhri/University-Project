@@ -1,0 +1,182 @@
+#home {
+  background-image: url("../../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(22, 65, 82, 0.8);
+  padding: 50px;
+  border: 1px solid var(--blue);
+  border-radius: 50px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+}
+@media (max-width: 767px) {
+  .form_main {
+    width: 341px;
+    height: 610px;
+  }
+}
+
+.heading {
+  font-size: 2.5em;
+  color: white;
+  font-weight: 700;
+  margin: 15px 0 30px 0;
+}
+
+label {
+  font-size: 24px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+::-moz-placeholder {
+  color: #95abb4 !important;
+}
+
+::placeholder {
+  color: #95abb4 !important;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#inputIcon {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  color: #95abb4;
+  margin-left: 5px;
+}
+
+.inputField {
+  width: 100%;
+  height: 75px;
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 30px;
+  margin: 10px 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-left: 40px;
+}
+
+.inputField:focus {
+  outline: none;
+}
+
+.inputField::-moz-placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.inputField::placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#button1 {
+  position: relative;
+  width: 100%;
+  border: 2px solid var(--blue);
+  background-color: var(--blue);
+  height: 40px;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: 0 1rem;
+}
+#button1:hover {
+  border: 2px solid var(--blue);
+  background-color: transparent;
+}
+#button1::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.253);
+  height: 100%;
+  width: 150px;
+  top: 0;
+  left: -200px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  filter: blur(10px);
+  transition-duration: 0.5s;
+}
+#button1:hover::after {
+  transform: translateX(600px);
+  transition-duration: 0.5s;
+}
+#Message_Success,
+#Message_false {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border: 3px solid var(--blue);
+  z-index: 10;
+}
+#Message_false {
+  border: 3px solid var(--red);
+}
+#Message_Success .icon,
+#Message_false .icon {
+  border: 3px solid var(--blue);
+  border-radius: 50%;
+  padding: 0 10px;
+}
+#Message_false .icon {
+  border: 3px solid var(--red);
+}
+#Message_Success .icon svg,
+#Message_false .icon svg {
+  font-size: 3rem;
+}
+#Message_Success .text h2,
+#Message_false .text h2 {
+  font-weight: 400 !important;
+}
+#Message_Success .text p {
+  color: var(--blue);
+}
+#Message_false .text p {
+  color: var(--red);
+}
+#Message_Success .close,
+#Message_false .close {
+  height: 100px;
+  font-size: 1rem;
+}
